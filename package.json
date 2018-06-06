@@ -1,0 +1,40 @@
+{
+  "name": "@vivocha/sample-mediahook",
+  "version": "1.0.0",
+  "description": "Vivocha sample media hook handler application",
+  "scripts": {
+    "clean": "[ ! -d ./dist ] || rm -rf dist/*",
+    "clean:all": "npm run clean && rm -rf node_modules",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "precommit": "npm run build",
+    "build:all": "npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/vivocha/sample-mediahook.git"
+  },
+  "author": "Vivocha Dev Team <dev@vivocha.com> (http://www.vivocha.com/)",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://bitbucket.org/vivocha/sample-mediahook.git#readme",
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.ts",
+    "vvc-mediahook",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "vvc-mediahook": "./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "@types/node": "^8.9.4",
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "commander": "^2.15.1",
+    "express": "^4.16.3"
+  }
+}
